@@ -35,7 +35,7 @@ def CSV_writer(scraped_itemlist):
             writer.writerow(item)
         outfile.close()
 
-## Funktion
+## Sammensat funktion. Tager args "keyword" som er emnet, du ønsker at søge på samt "start" og "end" som hhv. angiver første og sidste side af resultater, der skal medtages i skrabet
 def CBS_scraper(keyword, start, end):
     for i in range(start, end):
         URL = "https://www.cbsnews.com/search/?q={keyword}&p={pagenumber}".format(keyword = keyword, pagenumber = i)
